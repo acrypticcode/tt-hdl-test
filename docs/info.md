@@ -17,4 +17,4 @@ Use ui_in bits 0-2 to select which of the eight sequences will be run.
 
 ## External hardware
 
-External hardware is not needed.
+External hardware is not needed for this project.
