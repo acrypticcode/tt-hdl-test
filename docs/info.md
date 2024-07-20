@@ -9,12 +9,12 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-Explain how your project works
+The project allows the user to select between eight possible integer sequences. 
 
 ## How to test
 
-Explain how to use your project
+Use ui_in bits 0-2 to select which of the eight sequences will be run. 
 
 ## External hardware
 
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
+External hardware is not needed.
