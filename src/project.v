@@ -91,10 +91,10 @@ endmodule
 
 
 module mainsqrs(
-  input logic clk,
-  input logic reset,
-  input logic [7:0] counter,
-  output logic [7:0] perfout
+  input wire clk,
+  input wire reset,
+  input reg [7:0] counter,
+  output reg [7:0] perfout
 );
   always@(posedge clk) begin
     perfout <= counter*counter;
@@ -104,12 +104,11 @@ module mainsqrs(
   end
 endmodule
 
-
 module mainexp3(
-  input logic clk,
-  input logic reset,
-  input logic [7:0] counter,
-  output logic [7:0] expout
+  input wire clk,
+  input wire reset,
+  input reg [7:0] counter,
+  output reg [7:0] expout
 );
   always@(posedge clk) begin
     expout <= expout*3;
@@ -121,10 +120,10 @@ endmodule
 
 
 module maintri(
-  input logic clk,
-  input logic reset,
-  input logic [7:0] counter,
-  output logic [7:0] triout
+  input wire clk,
+  input wire reset,
+  input reg [7:0] counter,
+  output reg [7:0] triout
 );
   always@(posedge clk) begin
     triout <= triout+counter;
@@ -136,11 +135,11 @@ endmodule
 
 
 module mainfib(
-  input logic clk,
-  input logic reset,
-  output logic [7:0] fibout
+  input wire clk,
+  input wire reset,
+  output reg [7:0] fibout
 );
-  logic [7:0] nextout;    
+  reg [7:0] nextout;    
   always@(posedge clk) begin  
     nextout <= nextout+fibout;
     fibout <= nextout;
@@ -153,11 +152,11 @@ endmodule
 
 
 module mainpell(
-  input logic clk,
-  input logic reset,
-  output logic [7:0] pellout
+  input wire clk,
+  input wire reset,
+  output reg [7:0] pellout
 );  
-  logic [7:0] nextout;
+  reg [7:0] nextout;
   always@(posedge clk) begin
     nextout <= 2*nextout+pellout;
     pellout <= nextout;
@@ -171,11 +170,11 @@ endmodule
 
 
 module mainluc(
-  input logic clk,
-  input logic reset,
-  output logic [7:0] lucout
+  input wire clk,
+  input wire reset,
+  output reg [7:0] lucout
 );
-  logic [7:0] nextout;
+  reg [7:0] nextout;
   always@(posedge clk) begin
     nextout <= nextout+lucout;
     lucout <= nextout;
@@ -188,12 +187,12 @@ endmodule
 
 
 module mainpad(
-  input logic clk,
-  input logic reset,
-  output logic [7:0] padout
+  input wire clk,
+  input wire reset,
+  output reg [7:0] padout
 );
-  logic [7:0] next2;
-  logic [7:0] next1;
+  reg [7:0] next2;
+  reg [7:0] next1;
   always@(posedge clk) begin
     next2 <= next1 + padout;
     next1 <= next2;
@@ -208,11 +207,11 @@ endmodule
 
 
 module mainsylv( 
-  input logic clk,
-  input logic reset,
-  output logic [7:0] sylvout
+  input wire clk,
+  input wire reset,
+  output reg [7:0] sylvout
 );
-  logic [7:0] nextout;
+  reg [7:0] nextout;
   always@(posedge clk) begin
     nextout <= nextout*(nextout-1)+1;
     sylvout <= nextout;
@@ -225,9 +224,9 @@ endmodule
 
 
 module maincounter(
-  input logic clk,
-  input logic reset,
-  output logic [7:0] countout
+  input wire clk,
+  input wire reset,
+  output reg [7:0] countout
 );
   always@(posedge clk) begin
     countout <= countout+8'b00000001;
