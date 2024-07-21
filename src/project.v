@@ -73,7 +73,6 @@ module tt_um_acrypticcode (
   reg reset_signal;
 
   
-  
   // All output pins must be assigned. If not used, assign to 0.
   assign reset_signal = !rst_n || ui_in[3];
   assign uio_out = 0;
