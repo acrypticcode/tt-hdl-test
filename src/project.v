@@ -70,7 +70,7 @@ module tt_um_acrypticcode (
   );
   
   reg [7:0] sqrs_output, exp3_output, tri_output, fib_output, pell_output, luc_output, pad_output, sylv_output, counter_value;
-  logic reset_signal;
+  reg reset_signal;
 
   
   
