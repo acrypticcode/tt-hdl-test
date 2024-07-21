@@ -69,7 +69,7 @@ module tt_um_acrypticcode (
     .countout(counter_value)
   );
   
-  logic [7:0] sqrs_output, exp3_output, tri_output, fib_output, pell_output, luc_output, pad_output, sylv_output, counter_value;
+  reg [7:0] sqrs_output, exp3_output, tri_output, fib_output, pell_output, luc_output, pad_output, sylv_output, counter_value;
   logic reset_signal;
 
   
