@@ -93,7 +93,7 @@ endmodule
 module mainsqrs(
   input wire clk,
   input wire reset,
-  input reg [7:0] counter,
+  input [7:0] counter,
   output reg [7:0] perfout
 );
   always@(posedge clk) begin
@@ -107,7 +107,7 @@ endmodule
 module mainexp3(
   input wire clk,
   input wire reset,
-  input reg [7:0] counter,
+  input [7:0] counter,
   output reg [7:0] expout
 );
   always@(posedge clk) begin
@@ -122,7 +122,7 @@ endmodule
 module maintri(
   input wire clk,
   input wire reset,
-  input reg [7:0] counter,
+  input [7:0] counter,
   output reg [7:0] triout
 );
   always@(posedge clk) begin
